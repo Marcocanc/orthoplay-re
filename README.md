@@ -23,6 +23,19 @@ In the js implementation, a unique ID for the remote is generated with the follo
 var uid = "uid-" + Math.floor(1e8 * Math.random());
 ```
 
+##Staying Connected
+In order to stay connected, it is required to send a ping with a timestamp every once in a while (The web client does this every 5 seconds)
+```javascript
+var createPing = function() {
+	return {
+		value: (new Date).getTime() % 1e6,
+		action:"speaker_ping"
+	}
+}
+```
+The ping message will look like this `{"value":913577,"action":"speaker_ping"}`
+
+
 ###Changing the Volume
 You can change the volume of your speaker group by sending the `group_change_volume` message along with the amount by which the volume should change
 
