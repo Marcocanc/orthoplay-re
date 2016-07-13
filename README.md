@@ -1,5 +1,7 @@
 # Reversing Orthoplay
 *Tested on OD-11 running V0.9.11*
+
+![Intel Edison with Encoder for controlling Volume and Display](https://raw.githubusercontent.com/Marcocanc/orthoplay/master/images/edison_remote.jpg)
 ## Endpoints
 
 Communication to the OD-11 goes through Websockets.
